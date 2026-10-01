@@ -1,0 +1,309 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+    --sneat-bg: #f3f4fa;
+    --sneat-panel: #ffffff;
+    --sneat-sidebar: #f7f7fb;
+    --sneat-border: #e7eaf3;
+    --sneat-text: #3f445b;
+    --sneat-muted: #6f7288;
+    --sneat-primary: #7367f0;
+    --sneat-primary-soft: #e9e5ff;
+    --sneat-success: #28c76f;
+    --sneat-danger: #ea5455;
+    --sneat-warning: #f5b740;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--sneat-bg);
+    color: var(--sneat-text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app {
+    min-height: 100vh;
+}
+
+.sneat-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sneat-sidebar {
+    width: 260px;
+    background: var(--sneat-sidebar);
+    border-right: 1px solid var(--sneat-border);
+    padding: 20px 18px;
+}
+
+.sneat-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 10px 18px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #5b4ee6;
+}
+
+.sneat-brand-mark {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6d5ef7 0%, #5246d6 100%);
+    position: relative;
+    display: inline-block;
+}
+
+.sneat-brand-mark::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    top: 7px;
+    left: 7px;
+    opacity: 0.9;
+}
+
+.sneat-menu {
+    list-style: none;
+    margin: 22px 0 0;
+    padding: 0;
+}
+
+.sneat-menu li {
+    padding: 10px 0;
+}
+
+.sneat-menu button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #7d819b;
+    font-size: 1.05rem;
+    border-radius: 12px;
+    text-align: left;
+    padding: 12px 14px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sneat-menu button.active {
+    background: linear-gradient(90deg, var(--sneat-primary) 0%, #695fe7 100%);
+    color: white;
+    box-shadow: 0 8px 18px rgba(115, 103, 240, 0.25);
+}
+
+.sneat-main {
+    flex: 1;
+    padding: 22px 26px 26px;
+}
+
+.sneat-topbar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.sneat-toggle {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    background: var(--sneat-primary);
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1;
+    box-shadow: 0 8px 16px rgba(115, 103, 240, 0.18);
+}
+
+.sneat-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid var(--sneat-border);
+    border-radius: 14px;
+    padding: 0 16px;
+    min-height: 52px;
+    box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.02);
+}
+
+.sneat-search span {
+    font-size: 1.4rem;
+    color: #8d90a5;
+    margin-right: 10px;
+}
+
+.sneat-search input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: var(--sneat-text);
+}
+
+.sneat-user {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(115, 103, 240, 0.12);
+    color: var(--sneat-primary);
+    font-size: 1.2rem;
+}
+
+.sneat-content {
+    background: rgba(255,255,255,0.35);
+    border: 1px solid var(--sneat-border);
+    border-radius: 18px;
+    padding: 22px 24px 18px;
+    min-height: calc(100vh - 120px);
+}
+
+.sneat-page-title {
+    font-size: 0.9rem;
+    color: var(--sneat-muted);
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.sneat-page-title strong {
+    color: var(--sneat-text);
+    font-weight: 700;
+}
+
+.sneat-form-card,
+.sneat-table-card {
+    background: rgba(255,255,255,0.72);
+    border: 1px solid var(--sneat-border);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 18px rgba(15, 23, 42, 0.02);
+}
+
+.sneat-form {
+    margin-bottom: 18px;
+}
+
+.sneat-form .form-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--sneat-text);
+    margin-bottom: 8px;
+}
+
+.sneat-form .form-control {
+    height: 48px;
+    border-radius: 12px;
+    background: #f9f9fc;
+    border-color: #e8eaf2;
+    color: var(--sneat-text);
+    box-shadow: none;
+}
+
+.sneat-form .form-control:focus {
+    border-color: var(--sneat-primary);
+    box-shadow: 0 0 0 0.2rem rgba(115, 103, 240, 0.12);
+}
+
+.sneat-action-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.sneat-btn {
+    border: none;
+    border-radius: 12px;
+    padding: 0.7rem 1.25rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.sneat-btn-secondary {
+    background: #f1f2f6;
+    color: var(--sneat-text);
+}
+
+.sneat-btn-primary {
+    background: linear-gradient(90deg, var(--sneat-primary) 0%, #5d4dd8 100%);
+    color: white;
+    box-shadow: 0 8px 16px rgba(115, 103, 240, 0.2);
+}
+
+.sneat-btn-danger {
+    background: linear-gradient(90deg, var(--sneat-danger) 0%, #d74141 100%);
+    color: white;
+}
+
+.sneat-btn-warning {
+    background: linear-gradient(90deg, var(--sneat-warning) 0%, #df9e1b 100%);
+    color: white;
+}
+
+.sneat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.sneat-table thead th {
+    padding: 12px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--sneat-muted);
+    border-bottom: 1px solid var(--sneat-border);
+}
+
+.sneat-table tbody td {
+    padding: 15px 14px;
+    border-bottom: 1px solid var(--sneat-border);
+    color: var(--sneat-text);
+    font-size: 0.95rem;
+}
+
+.sneat-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.sneat-table-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sneat-empty {
+    text-align: center;
+    color: var(--sneat-muted);
+    padding: 24px 0;
+}
+
+@media (max-width: 991px) {
+    .sneat-shell {
+        flex-direction: column;
+    }
+
+    .sneat-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--sneat-border);
+    }
+
+    .sneat-main {
+        padding-top: 12px;
+    }
+}
+
